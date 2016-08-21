@@ -1,0 +1,140 @@
+
+\documentclass[a4paper,11pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+
+
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Book's title and subtitle
+\title{\Huge \textbf{Applied Probability and Statistics Lab}   \\ \huge For KTU MCA }
+% Author
+\author{\textsc{Dr.Sunil Thomas Thonikuzhiyil}\thanks{\url{http://ceattingal.ac.in}} \\ Second author }
+
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add a dedication paragraph to dedicate your book to someone %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{dedication}
+Dedicated to Calvin and Hobbes.
+\end{dedication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto-generated table of contents, list of figures and list of tables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+%%%%%%%%%%%
+% Preface %
+%%%%%%%%%%%
+\chapter*{Preface}
+
+
+%\section*{Un-numbered sample section}
+
+
+%\section*{Another sample section}
+
+%\section*{Structure of book}
+ 
+
+%\section*{About the companion website}
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Give credit where credit is due. %
+% Say thanks!                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgements}
+\begin{itemize}
+\item A special word of thanks goes to Professor Don Knuth\footnote{\url{http://www-cs-faculty.stanford.edu/~uno/}} (for \TeX{}) and Leslie Lamport\footnote{\url{http://www.lamport.org/}} (for \LaTeX{}).
+ 
+\end{itemize}
+\mbox{}\\
+%\mbox{}\\
+ 
+
+%%%%%%%%%%%%%%%%
+% NEW CHAPTER! %
+%%%%%%%%%%%%%%%%
+\chapter{Visualizing Data}
+ 
+
+\section*{What we will learn}
+In this experiment we will try to  learn the preliminaries of R along with methods of visualizing data in R
+
+Tables, charts and plots. Visualizing Measures of Central Tendency, Variation,
+and Shape. Box plots, Pareto diagrams. How to find the mean median standard
+deviation and quantiles of a set of observations.
+
+
+
+
+\section{Introduction to R}
+\subsection{Installing R }
+\subsection{Installing R studio}
+ 
+ \section{R fundamentals}
+ 
+ \section{R data structures}
+ 
+ \section{Plotting in R}
+
+\chapter{Probability Distributions}
+
+\chapter{Random Samples}
+
+\chapter{Binomial Distribution and Central Limit theorem}
+
+\chapter{Confidence Intervals}
+\chapter{Correlation}
+\chapter{Regression}
+ 
+ 
+
+\end{document}
