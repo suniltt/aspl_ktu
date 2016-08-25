@@ -6,8 +6,30 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[english]{babel}
+ 
+\usepackage{listings}
+\usepackage{color}
 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 \newenvironment{dedication}
 {
    \cleardoublepage
@@ -45,7 +67,7 @@
 % Book's title and subtitle
 \title{\Huge \textbf{Applied Probability and Statistics Lab}   \\ \huge For KTU MCA }
 % Author
-\author{\textsc{Dr.Sunil Thomas Thonikuzhiyil}\thanks{\url{http://ceattingal.ac.in}} \\ Second author }
+\author{\textsc{Dr.Sunil Thomas Thonikuzhiyil}\thanks{\url{College of Engineering Attingal}} \\  }
 
 
 \begin{document}
@@ -121,6 +143,43 @@ deviation and quantiles of a set of observations.
  
  \section{R fundamentals}
  
+ 
+
+This is a review of R fundamentals. No details are covered. It is assumed that the participant is familiar with programming.
+\subsection{Basic Math operations in R}
+Type the following  on > prompt and see the results. 
+ \begin{lstlisting}[language=R]
+1 + 1
+5 - 3
+3 * 3
+4 / 5
+4 ^ 2   # Exponetiation
+5 %% 2   # Modulus
+5 %/% 2  # integer division
+
+
+\end{lstlisting}
+
+\subsection{Variables and assignment in R}
+ There is no  need to declare variables in advance. Rules for variable names are almost similar to those in C programming language. There are two assignment : + and <-.  The preferred assignment operator is <- . 
+ Try the following.
+  \begin{lstlisting}[language=R]
+x=20  # assign x=20
+y<-3  # assign y =3
+x     # Display x
+y     # Display y
+x=y
+x
+y<-x*10
+
+\end{lstlisting}
+
+A variable can be removed using rm(0 function.
+
+ \begin{lstlisting}[language=R]
+ rm()  # remove x 
+ x     # try printing x after removal
+\end{lstlisting}
  \section{R data structures}
  
  \section{Plotting in R}
@@ -134,7 +193,10 @@ deviation and quantiles of a set of observations.
 \chapter{Confidence Intervals}
 \chapter{Correlation}
 \chapter{Regression}
+   \begin{lstlisting}[language=R]
  
+
+\end{lstlisting}
  
 
 \end{document}
