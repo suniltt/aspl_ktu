@@ -3,11 +3,37 @@
 \documentclass["../Applied_probabillity _and_statistics_lab_KTU.tex"]{subfiles}
  
 \begin{document}
-\textbf{Hello world!}
+\section{Simulating Coin Toss}
+ The probability of getting a Heads or a Tails on a coin toss is both 0.5.  We can use
+R to simulate an experiment of flipping a coin a number of times and compare our results with
+the theoretical probability.  
+
+0 = Tails and 1 = Heads
+
+
+\begin{lstlisting}[language=R]
+
+sample(0:1,15,rep=T)  #flip 15 times
+ 
+# read the manual for sample function and try to under stand the options.
+help(sample) 
+\end{lstlisting}
+
+Let us write a small function so that we can easily repeat coin toss experiment and calculate probability of getting 1.
+ \begin{lstlisting}[language=R]
+ flip= function(n) sample(0:1,n,rep=T) # look at the function definition and the argument passing.
+ exp1<-flip (100) 	# let us flip 100 times
+ prob= sum(exp1==1)/100
+ 
+ exp2= flip(10000);   # a  semi colon suppresses long outputs
+ prob= sum(exp2==1)/10000
+ 
+ \end{lstlisting}
+ 
+ Rolling a dice with six faces 20 times can be simulated in R using 
+ sample(1:6,20,rep=T).  Write a function to simulate roll of a dice and roll it 10000 time. Compute the probability of getting 4 any number less than 4.
  
  
- 
-Hello, here is some text without a meaning.  This... 
 \end{document}
 
 
